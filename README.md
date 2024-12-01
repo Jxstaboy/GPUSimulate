@@ -34,3 +34,7 @@ How It Works
 
 
 YOU WILL NOT BE ABLE TO SIMULATE A GPU MORE POWERFUL THAN YOUR CURRENT GPU
+
+
+
+PS: The File "GPUSimulateNov" is outdated.
