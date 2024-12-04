@@ -5,36 +5,21 @@ GPUSimulate is made to make it easier to benchmark Older gen GPU's by limiting t
 How It Works
 
   Detects GPU Type:
-        Automatically identifies whether your system uses an NVIDIA or AMD GPU.
-        If neither is detected, it exits gracefully with troubleshooting tips.
+        Automatically identifies whether your system uses an NVIDIA GPU.
+        If neither is detected, it will still run, altrough it might not work.
 
    Dynamic Querying:
-        For NVIDIA GPUs: Utilizes the nvidia-smi tool to query GPU details, such as model name, maximum power, and current power usage.
-        For AMD GPUs: On Linux, it fetches GPU information from system files in /sys/class/drm.
+        Utilizes the nvidia-smi tool to query GPU details, such as model name, maximum power, and current power usage.
+
 
   Settings Application:
-        NVIDIA:
             Sets the power limit (in watts) and clock speed (in MHz) using nvidia-smi commands.
-        AMD:
-            Adjusts the power limit and clock speed directly by writing to system files under /sys/class/drm/cardX/device
 
+  AMD GPUs are currently not compatible with the program, however it has been planned to be fixed in a later release.
 
-  Unsupported GPUs:
-  Intel GPUs
-  Intel UHD intergrated graphics
+  Compatible GPUs are written in the "_gpu-list.json_" file. some gpus aren't written in this list but in the default list, to access it just put the json file into another directory.
+   I hope this program helps you :)
 
+   i kindly ask that if you find issues, please note them, this will improve developpement even more.
+   sadly i don't have a high-gen PC to test every issue, so i'm also looking for testers with a high gen PC to check if the issue is solvable or not.
 
-  HOW TO USE:
-  1. Install the GPUSim2Nov.py file and run it.
-  2. Choose what gpu you want to simulate
-  3. KEEP FILE OPEN TO UNDO CHANGES AFTER BENCHMARK
-
-     If the command prompt closes instantly, it means your GPU doesn't have the NVIDIA-SMI file required to change the settings.
-     To fix this, either upgrade your gpu or update to the latest driver.
-
-
-YOU WILL NOT BE ABLE TO SIMULATE A GPU MORE POWERFUL THAN YOUR CURRENT GPU
-
-
-
-PS: The File "GPUSimulateNov" is outdated.
